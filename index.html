@@ -15,48 +15,55 @@
   </head>
   <body>
     <div class="container">
-      <h1>World Clock</h1>
-      <div>
-        <select id="cities">
-          <option value="">Select a city</option>
-          <option value="">Toronto</option>
-          <option value="">Sydney</option>
-          <option value="">Rome</option>
-        </select>
-      </div>
+      <div class="app-wrapper">
+        <h1>World Clock</h1>
+        <div>
+          <select class="form-select" id="cities">
+            <option value="">Select a city</option>
+            <option value="">Toronto</option>
+            <option value="">Sydney</option>
+            <option value="">Rome</option>
+          </select>
+        </div>
 
-      <div class="row">
-        <div class="col-6">
-          <h2 class="city" id="city-name">Chicago 🇺🇸</h2>
-          <div class="date" id="city-date">May 23rd 2023</div>
+        <div class="row align-items-center">
+          <div class="col-6">
+            <h2 class="city" id="city-name">Chicago 🇺🇸</h2>
+            <div class="date" id="city-date">May 23rd 2023</div>
+          </div>
+          <div class="col-6">
+            <div class="time" id="city-time">
+              1:54:15 <small class="day-time"> PM</small>
+            </div>
+          </div>
         </div>
-        <div class="col-6">
-          <div class="time" id="city-time">1:54:15 PM</div>
+        <hr />
+        <div class="row align-items-center">
+          <div class="col-6">
+            <h2 class="city" id="city-name">Tokyo 🇯🇵</h2>
+            <div class="date" id="city-date">May 24th 2023</div>
+          </div>
+          <div class="col-6">
+            <div class="time" id="city-time">
+              1:54:15 <small class="day-time"> AM</small>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row align-items-center">
+          <div class="col-6">
+            <h2 class="city" id="city-name">Bogota 🇨🇴</h2>
+            <div class="date" id="city-date">May 23rd 2023</div>
+          </div>
+          <div class="col-6">
+            <div class="time" id="city-time">
+              1:54:15 <small class="day-time"> PM</small>
+            </div>
+          </div>
         </div>
       </div>
-      <hr />
-      <div class="row">
-        <div class="col-6">
-          <h2 class="city" id="city-name">Tokyo 🇯🇵</h2>
-          <div class="date" id="city-date">May 24th 2023</div>
-        </div>
-        <div class="col-6">
-          <div class="time" id="city-time">1:54:15 AM</div>
-        </div>
-      </div>
-      <hr />
-      <div class="row">
-        <div class="col-6">
-          <h2 class="city" id="city-name">Bogota 🇨🇴</h2>
-          <div class="date" id="city-date">May 23rd 2023</div>
-        </div>
-        <div class="col-6">
-          <div class="time" id="city-time">1:54:15 PM</div>
-        </div>
-      </div>
-
       <footer>
-        This project was coded by Maria Soto and is
+        This project was coded by <strong> Maria Soto</strong> and is
         <a href="https://github.com/mariasotor/world-clock-app" target="_blank"
           >open-sourced on GitHub</a
         >
