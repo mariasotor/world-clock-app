@@ -42,6 +42,10 @@ function updateCity(event) {
   <div class="col-6">
   <div class="time">${showTime(timezone)}</div>
   </div>
+  </div>
+    <hr />
+  <div>
+  <a href="index.html">Back to homepage</a>
   </div>`;
 }
 
