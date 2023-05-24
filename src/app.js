@@ -46,7 +46,7 @@ function updateCity(event) {
   </div>
     <hr />
   <div>
-  <a href="index.html">Back to homepage</a>
+  <a href="/">Back to homepage</a>
   </div>`;
 
     setTimeout(() => {
