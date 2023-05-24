@@ -5,6 +5,7 @@ function showDate(timezone) {
 function showTime(timezone) {
   return moment().tz(timezone).format("h:mm:ss [<small>]A[</small>]");
 }
+
 function updateTime() {
   let NewYorkTimeElement = document.querySelector("#newyork-time");
   if (NewYorkTimeElement) {
@@ -25,17 +26,21 @@ function updateTime() {
 }
 
 function updateCity(event) {
+  let timezone = event.target.value;
+  if (timezone === "current") {
+    timezone = moment.tz.guess();
+  }
   let cityDisplayElement = document.querySelector("#city-display");
   cityDisplayElement.innerHTML = `
   <div class="row align-items-center">
   <div class="col-6">
   <h2 class="city">
-  ${event.target.selectedOptions[0].text}
+  ${timezone.replace("_", " ").split("/")[1]}
   </h2>
-  <div class="date">${showDate(event.target.value)}</div>
+  <div class="date">${showDate(timezone)}</div>
   </div>
   <div class="col-6">
-  <div class="time">${showTime(event.target.value)}</div>
+  <div class="time">${showTime(timezone)}</div>
   </div>
   </div>`;
 }
