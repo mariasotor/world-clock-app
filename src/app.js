@@ -26,12 +26,13 @@ function updateTime() {
 }
 
 function updateCity(event) {
-  let timezone = event.target.value;
-  if (timezone === "current") {
-    timezone = moment.tz.guess();
-  }
-  let cityDisplayElement = document.querySelector("#city-display");
-  cityDisplayElement.innerHTML = `
+  if (event.target.value.length > 0) {
+    let timezone = event.target.value;
+    if (timezone === "current") {
+      timezone = moment.tz.guess();
+    }
+    let cityDisplayElement = document.querySelector("#city-display");
+    cityDisplayElement.innerHTML = `
   <div class="row align-items-center">
   <div class="col-6">
   <h2 class="city">
@@ -47,6 +48,11 @@ function updateCity(event) {
   <div>
   <a href="index.html">Back to homepage</a>
   </div>`;
+
+    setTimeout(() => {
+      updateCity(event);
+    }, 1000);
+  }
 }
 
 let selectCityElement = document.querySelector("#cities");
