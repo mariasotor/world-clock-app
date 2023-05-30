@@ -31,21 +31,20 @@ function updateCity(event) {
     if (timezone === "current") {
       timezone = moment.tz.guess();
     }
-    let cityDisplayElement = document.querySelector("#city-display");
-    cityDisplayElement.innerHTML = `
-  <div class="row align-items-center">
-  <div class="col-6">
-  <h2 class="city">
-  ${timezone.replace("_", " ").split("/")[1]}
-  </h2>
-  <div class="date">${showDate(timezone)}</div>
-  </div>
-  <div class="col-6">
-  <div class="time">${showTime(timezone)}</div>
-  </div>
-  </div>
-    <hr />
-  <div>
+    let citiesElement = document.querySelector("#main-cities");
+    citiesElement.innerHTML = `
+
+  <div class="city-display">         
+   <div>
+    <h2 class="city">
+     ${timezone.replace("_", " ").split("/")[1]}
+    </h2>
+    <div class="date">${showDate(timezone)}</div>
+   </div>
+   <div class="time">${showTime(timezone)}</div>
+  </div>  
+  <hr />
+  <div class="text-center">
   <a href="/">Back to homepage</a>
   </div>`;
 
